@@ -16,6 +16,9 @@ public class Keyboard {
     public static final Keyboard QWERTY =
             new Keyboard("qwerty", new SlantedAdjacentGraphBuilder(loadAsString("keyboards/qwerty.txt")));
 
+    public static final Keyboard AZERTY =
+            new Keyboard("azerty", new SlantedAdjacentGraphBuilder(loadAsString("keyboards/azerty.txt")));
+
     public static final Keyboard DVORAK =
             new Keyboard("dvorak", new SlantedAdjacentGraphBuilder(loadAsString("keyboards/dvorak.txt")));
 
@@ -28,7 +31,7 @@ public class Keyboard {
     public static final Keyboard MAC_KEYPAD =
             new Keyboard("mac_keypad", new AlignedAdjacentAdjacentGraphBuilder(loadAsString("keyboards/mac_keypad.txt")));
 
-    public static final List<Keyboard> ALL_KEYBOARDS = Arrays.asList(QWERTY, DVORAK, JIS, KEYPAD, MAC_KEYPAD);
+    public static final List<Keyboard> ALL_KEYBOARDS = Arrays.asList(QWERTY, AZERTY, DVORAK, JIS, KEYPAD, MAC_KEYPAD);
 
     private final String name;
 
