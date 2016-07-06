@@ -37,6 +37,7 @@ public class Feedback {
     public static final String DICTIONARY_WARNING_PASSWORDS_VERY_COMMON = "feedback.dictionary.warning.passwords.veryCommon";
     public static final String DICTIONARY_WARNING_PASSWORDS_SIMILAR = "feedback.dictionary.warning.passwords.similar";
     public static final String DICTIONARY_WARNING_ENGLISH_WIKIPEDIA_ITSELF = "feedback.dictionary.warning.englishWikipedia.itself";
+    public static final String DICTIONARY_WARNING_FRENCH_LEXIQUE_PROJECT_ITSELF = "feedback.dictionary.warning.frenchLexiqueProject.itself";
     public static final String DICTIONARY_WARNING_ETC_NAMES_THEMSELVES = "feedback.dictionary.warning.etc.namesThemselves";
     public static final String DICTIONARY_WARNING_ETC_NAMES_COMMON = "feedback.dictionary.warning.etc.namesCommon";
     public static final String DICTIONARY_SUGGESTIONS_CAPITALIZATION = "feedback.dictionary.suggestions.capitalization";
@@ -175,7 +176,11 @@ public class Feedback {
             if (isSoleMatch) {
                 warning = DICTIONARY_WARNING_ENGLISH_WIKIPEDIA_ITSELF;
             }
-        } else if (Arrays.asList(new String[]{"surnames", "male_names", "female_names"}).contains(match.dictionaryName)) {
+        } else if ("french_lexique_project".equals(match.dictionaryName)) {
+            if (isSoleMatch) {
+                warning = DICTIONARY_WARNING_FRENCH_LEXIQUE_PROJECT_ITSELF;
+            }
+        } else if (Arrays.asList(new String[]{"surnames", "male_names", "female_names", "french_names"}).contains(match.dictionaryName)) {
             if (isSoleMatch) {
                 warning = DICTIONARY_WARNING_ETC_NAMES_THEMSELVES;
             } else {

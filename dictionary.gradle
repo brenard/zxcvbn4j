@@ -11,11 +11,14 @@ class DictionaryTask extends DefaultTask {
     String ext = ".txt"
 
     Map params = [ "us_tv_and_film": 30000,
+                   "fr_tv_and_film": 30000,
                    "english_wikipedia": 30000,
+                   "french_lexique_project": 30000,
                    "passwords": 30000,
                    "surnames": 10000,
                    "male_names": null,
-                   "female_names": null ]
+                   "female_names": null,
+                   "french_names": null ]
     @TaskAction
     def generate() {
         Map<String, Map<String, Long>> unfilteredFreqLists = parseFrequencyLists();

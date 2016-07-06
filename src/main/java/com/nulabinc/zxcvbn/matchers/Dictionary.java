@@ -24,11 +24,14 @@ public class Dictionary {
 
     private static final String[] DICTIONARY_PARAMS = {
             "us_tv_and_film",
+            "fr_tv_and_film",
             "english_wikipedia",
+            "french_lexique_project",
             "passwords",
             "surnames",
             "male_names",
-            "female_names"
+            "female_names",
+            "french_names"
     };
 
     public static final Map<String, String[]> FREQUENCY_LISTS;
